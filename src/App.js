@@ -1,21 +1,16 @@
 import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import LoginSignup from './views/LoginSignup';
-import RealUser from './views/RealUser';
-import FakeSuspiciousUser from './views/FakeSuspiciousUser';
+import LoginLogout from './views/LoginLogout';
+import ResultsView from "./views/Results";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        element: <LoginSignup />,
+        element: <LoginLogout />,
     },
     {
-        path: "/real",
-        element: <RealUser />,
-    },
-    {
-        path: "/fake",
-        element: <FakeSuspiciousUser />,
+        path: "/results",
+        element: <ResultsView />,
     }
 ]);
 

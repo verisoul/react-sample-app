@@ -47,6 +47,7 @@ app.post("/api/authenticated", async (req, res) => {
 
         res.status(200).send(results);
     } catch (err) {
+        console.error(err);
         res.status(500).send({error: err.message});
     }
 });

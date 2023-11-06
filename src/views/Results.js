@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ReactJson from 'react-json-view';
 import {useLocation} from "react-router-dom";
 
-function ErrorView(){
+function ResultsView() {
     const [data, setData] = useState({});
     let location = useLocation();
 
@@ -12,10 +12,10 @@ function ErrorView(){
 
     return (
         <div>
-            <h1>Require additional verification</h1>
+            <h1>{data.decision === 'Real' ? 'Success!' : "Require additional verification"}</h1>
             <ReactJson src={data} />;
         </div>
     )
 }
 
-export default ErrorView;
+export default ResultsView;
